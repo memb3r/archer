@@ -69,11 +69,10 @@ $ python3 archer.py
 
 <h2>Usage:</h2>
 
-```bash
-1 - Phone number lookup.
-2 - Telegram scraper.
-3 - IP Scan.
-4 - Replit scraper
-5 - Subdomain finder.
-cls - Clear screen.
-```
+<li>1 - Phone number lookup.</li>
+<li>2 - Telegram scraper.</li>
+<li>3 - IP Scan.</li>
+<li>4 - Replit scraper</li>
+<li>5 - Subdomain finder <i>(9985 subdomains in a list)</i>. </li>
+<li>6 - Ukraine car plane lookup <i>(traffic police database)</i>. </i>. </li>
+<li>cls - Clear screen.</li>
