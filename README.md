@@ -78,7 +78,7 @@ $ python3 archer.py
 <li>cls - Clear screen.</li>
 
 <h2>Working on (1.0):</h2>
-<li><b>Debian and Debian-based</b> (Ubuntu, Zorin OS, Kali Linux, Linux Mint, etc.) ❔</li>
+<li><b>Debian and Debian-based</b> (Ubuntu, Zorin OS, Kali Linux, Linux Mint, etc.) ✅</li>
 <li><b>Fedora and Fedora-based</b> (openSUSE, CentOS, Oracle Linux, Red Hat, etc.) ❔</li>
 <li><b>Arch and Arch-based</b> (Manjaro, SteamOS, etc.)❔</li>
 <li><b>Void Linux</b> ❔</li>
