@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/repo-size/memb3r/archer"> <img src="https://img.shields.io/github/stars/memb3r/archer?color=yellow"> <img src="https://img.shields.io/github/languages/top/memb3r/archer?color=green">
+  <img src="https://img.shields.io/github/repo-size/memb3r/archer"> <img src="https://img.shields.io/github/last-commit/memb3r/archer">
 </p>
 
 <h2>Installation:</h2>
