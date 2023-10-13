@@ -16,7 +16,7 @@ $ sudo apt upgrade
 $ sudo apt install git python3-pip
 $ git clone https://github.com/memb3r/archer
 $ cd archer
-$ pip install colorama beautifulsoup4 rich
+$ python3 install.py
 $ python3 archer.py 
 ```
 
@@ -27,7 +27,7 @@ $ sudo dnf update
 $ sudo dnf install git python3-pip
 $ git clone https://github.com/memb3r/archer
 $ cd archer
-$ pip install colorama beautifulsoup4 rich
+$ python3 install.py
 $ python3 archer.py
 ```
 
@@ -38,7 +38,7 @@ $ sudo zypper refresh
 $ sudo zypper install git python3-pip
 $ git clone https://github.com/memb3r/archer
 $ cd archer
-$ pip install colorama beautifulsoup4 rich
+$ python3 install.py
 $ python3 archer.py
 ```
 
@@ -49,7 +49,7 @@ $ sudo pacman -Syu
 $ sudo pacman -S git python-pip
 $ git clone https://github.com/memb3r/archer
 $ cd archer
-$ pip install colorama beautifulsoup4 rich
+$ python3 install.py
 $ python archer.py
 ```
 
@@ -59,7 +59,7 @@ $ python archer.py
 $ sudo xbps-install -S git python3-pip
 $ git clone https://github.com/memb3r/archer
 $ cd archer
-$ pip install colorama beautifulsoup4 rich
+$ python3 install.py
 $ python3 archer.py
 ```
 
