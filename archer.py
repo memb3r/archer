@@ -51,6 +51,7 @@ def banner_start():
   console.print(f'\n[cyan bold]4[/cyan bold] - [italic]Replit scraper.[/italic]')
   console.print(f'\n[cyan bold]5[/cyan bold] - [italic]Subdomain finder.[/italic]')
   console.print(f'\n[cyan bold]6[/cyan bold] - [italic]Ukraine car plane lookup.[/italic]')
+  console.print(f'\n[cyan bold]7[/cyan bold] - [italic]Username lookup.[/italic]')
   console.print(f'\n[cyan bold]cls[/cyan bold] - [italic]Clear screen.[/italic]')
 
 def answerinp():
@@ -68,6 +69,8 @@ def answerinp():
       subdomainf()
     elif (answer == "6"):
       vehiclenum()
+    elif (answer == "7"):
+      usernamelook()
     elif (answer == ""):
       print()
     elif (answer == "cls"):
@@ -133,7 +136,7 @@ def ipscan():
                     console.print(f'[green]([magenta]+[green]) [white]Longitude: {ipvalues["lon"]}')
                     console.print(f'[green]([magenta]+[green]) [white]Timezone: {ipvalues["timezone"]}')
                 except json.JSONDecodeError as e:
-                    console.rint(f'\n[cyan]([red]-[cyan]) [white]Failed to parse JSON: {e}')
+                    console.print(f'\n[cyan]([red]-[cyan]) [white]Failed to parse JSON: {e}')
             else:
                 console.print(f'\n[cyan]([red]-[cyan]) [white]Empty response from the server')
         else:
@@ -199,6 +202,46 @@ def vehiclenum():
   vin_element = soup.find('span', class_='vin-code-erased')
   data_full = vin_element['data-full'] if vin_element else "Not Found"
   console.print(f"\n[green]([magenta]+[green])[white] VIN: {data_full}")
+
+def usernamelook():
+  usernameinp = console.input("\n[cyan]([magenta]![cyan]) [white]Input username: ")
+  social_platforms = {
+    'Facebook': 'https://www.facebook.com/{}',
+    'Twitter': 'https://twitter.com/{}',
+    'Instagram': 'https://www.instagram.com/{}',
+    'LinkedIn': 'https://www.linkedin.com/in/{}',
+    'YouTube': 'https://www.youtube.com/user/{}',
+    'TikTok': 'https://www.tiktok.com/@{}',
+    'Pinterest': 'https://www.pinterest.com/{}',
+    'Reddit': 'https://www.reddit.com/user/{}',
+    'Twitch': 'https://www.twitch.tv/{}',
+    'GitHub': 'https://github.com/{}',
+    'DeviantArt': 'https://www.deviantart.com/{}',
+    'SoundCloud': 'https://soundcloud.com/{}',
+    'Vimeo': 'https://vimeo.com/{}',
+    'Flickr': 'https://www.flickr.com/photos/{}',
+    'Weibo': 'https://weibo.com/{}',
+    'VKontakte': 'https://vk.com/{}',
+    'Odnoklassniki': 'https://ok.ru/profile/{}',
+    'Telegram': 'https://t.me/{}',
+    'Xing': 'https://www.xing.com/profile/{}',
+    'Clubhouse': 'https://www.joinclubhouse.com/@{}',
+    'Quora': 'https://www.quora.com/profile/{}',
+    'Medium': 'https://medium.com/@{}',
+    'Behance': 'https://www.behance.net/{}',
+    'Dribbble': 'https://dribbble.com/{}',
+    '500px': 'https://500px.com/{}',
+    'Foursquare': 'https://foursquare.com/user/{}',
+    'Periscope': 'https://www.pscp.tv/{}',
+    'Mix': 'https://mix.com/{}',
+    'Myspace': 'https://myspace.com/{}',
+    'Last.fm': 'https://www.last.fm/user/{}',
+    'Steam': 'https://steamcommunity.com/id/{}'
+  }
+  for platform, url in social_platforms.items():
+    response = requests.get(url.format(usernameinp))
+    if response.status_code == 200:
+        console.print(f"\n[green]([magenta]+[green])[white] Found {usernameinp} on {platform}: {url.format(usernameinp)}")
 
 if __name__ == '__main__':
   banner()
