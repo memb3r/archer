@@ -69,7 +69,7 @@ $ python3 archer.py
 
 <h2>Preview:</h2>
 
-<img src="previewarcher.png">
+<img src="archerscreen.png">
 
 <h2>Usage:</h2>
 
