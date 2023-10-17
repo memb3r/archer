@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  Version: 1.1
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/github/repo-size/memb3r/archer"> <img src="https://img.shields.io/github/last-commit/memb3r/archer">
 </p>
 
@@ -73,11 +77,12 @@ $ python3 archer.py
 <li>2 - Telegram scraper.</li>
 <li>3 - IP Scan.</li>
 <li>4 - Replit scraper</li>
-<li>5 - Subdomain finder <i>(9985 subdomains in a list)</i>. </li>
-<li>6 - Ukraine car plane lookup <i>(traffic police database)</i>. </i>. </li>
+<li>5 - Subdomain finder <i>(9985 subdomains in a list)</i>.</li>
+<li>6 - Ukraine car plane lookup <i>(traffic police database)</i>.</li>
+<li>7 - Username lookup.</li>
 <li>cls - Clear screen.</li>
 
-<h2>Working on (1.0):</h2>
+<h2>Working on (1.1):</h2>
 <li><b>Debian and Debian-based</b> (Ubuntu, Zorin OS, Kali Linux, Linux Mint, etc.) ✅</li>
 <li><b>Fedora and Fedora-based</b> (openSUSE, CentOS, Oracle Linux, Red Hat, etc.) ❔</li>
 <li><b>Arch and Arch-based</b> (Manjaro, SteamOS, etc.)❔</li>
