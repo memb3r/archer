@@ -13,7 +13,7 @@ import sys
 
 console = Console()
 
-version = "1.0"
+version = "1.1"
 author = "memb3r"
 description = "Powerful OSINT-tool on Python."
 
