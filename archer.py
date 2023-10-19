@@ -10,10 +10,11 @@ import time
 import urllib3
 from urllib3.exceptions import SSLError
 import sys
+from faker import Faker
 
 console = Console()
 
-version = "1.1"
+version = "1.2"
 author = "memb3r"
 description = "Powerful OSINT-tool on Python."
 
@@ -52,6 +53,7 @@ def banner_start():
   console.print(f'\n[cyan bold]5[/cyan bold] - [italic]Subdomain finder.[/italic]')
   console.print(f'\n[cyan bold]6[/cyan bold] - [italic]Ukraine car plane lookup.[/italic]')
   console.print(f'\n[cyan bold]7[/cyan bold] - [italic]Username lookup.[/italic]')
+  console.print(f'\n[cyan bold]8[/cyan bold] - [italic]Fake information generator.[/italic]')
   console.print(f'\n[cyan bold]cls[/cyan bold] - [italic]Clear screen.[/italic]')
 
 def answerinp():
@@ -71,6 +73,8 @@ def answerinp():
       vehiclenum()
     elif (answer == "7"):
       usernamelook()
+    elif (answer == "8"):
+      fakeinfo()
     elif (answer == ""):
       print()
     elif (answer == "cls"):
@@ -242,6 +246,12 @@ def usernamelook():
     response = requests.get(url.format(usernameinp))
     if response.status_code == 200:
         console.print(f"\n[green]([magenta]+[green])[white] Found {usernameinp} on {platform}: {url.format(usernameinp)}")
+
+def fakeinfo():
+  fake = Faker()
+  console.print(f"\n[green]([magenta]![green]) [white]Fake full name: {fake.name()}")
+  console.print(f"[green]([magenta]![green]) [white]Fake address: {fake.address()}")
+  console.print(f"[green]([magenta]![green]) [white]Fake text: {fake.text()}")
 
 if __name__ == '__main__':
   banner()
