@@ -11,10 +11,11 @@ import urllib3
 from urllib3.exceptions import SSLError
 import sys
 from faker import Faker
+import socket
 
 console = Console()
 
-version = "1.2"
+version = "1.3"
 author = "memb3r"
 description = "Powerful OSINT-tool on Python."
 
@@ -54,6 +55,7 @@ def banner_start():
   console.print(f'\n[cyan bold]6[/cyan bold] - [italic]Ukraine car plane lookup.[/italic]')
   console.print(f'\n[cyan bold]7[/cyan bold] - [italic]Username lookup.[/italic]')
   console.print(f'\n[cyan bold]8[/cyan bold] - [italic]Fake information generator.[/italic]')
+  console.print(f'\n[cyan bold]9[/cyan bold] - [italic]Port scanner.[/italic]')
   console.print(f'\n[cyan bold]cls[/cyan bold] - [italic]Clear screen.[/italic]')
 
 def answerinp():
@@ -75,6 +77,8 @@ def answerinp():
       usernamelook()
     elif (answer == "8"):
       fakeinfo()
+    elif (answer == "9"):
+      nmapscan()
     elif (answer == ""):
       print()
     elif (answer == "cls"):
@@ -252,6 +256,30 @@ def fakeinfo():
   console.print(f"\n[green]([magenta]![green]) [white]Fake full name: {fake.name()}")
   console.print(f"[green]([magenta]![green]) [white]Fake address: {fake.address()}")
   console.print(f"[green]([magenta]![green]) [white]Fake text: {fake.text()}")
+
+def nmapscan():
+  target_host = console.input("\n[cyan]([magenta]![cyan]) [white]Enter IP: ")
+  port_range = [int(x) for x in console.input("\n[cyan]([magenta]![cyan]) [white]Enter port range (start-end): ").split('-')]
+
+  open_ports = []
+
+  try:
+              target_ip = socket.gethostbyname(target_host)
+  except socket.gaierror:
+      console.print("\n[red]Invalid host or unable to resolve host.")
+      return
+
+  for port in range(port_range[0], port_range[1] + 1):
+      sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+      sock.settimeout(1)
+      result = sock.connect_ex((target_ip, port))
+      if result == 0:
+        open_ports.append(port)
+      sock.close()
+  if open_ports:
+      console.print(f"\n[green]([magenta]![green]) [white]Open ports on {target_host}: {', '.join(map(str, open_ports))}")
+  else:
+      console.print(f"\n[red]([magenta]X[red]) [white]No open ports found on {target_host}.")
 
 if __name__ == '__main__':
   banner()
