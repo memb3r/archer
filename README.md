@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  Version: 1.2
+  Version: 1.3
 </p>
 
 <p align="center">
@@ -81,9 +81,10 @@ $ python3 archer.py
 <li>6 - Ukraine car plane lookup <i>(traffic police database)</i>.</li>
 <li>7 - Username lookup.</li>
 <li>8 - Fake information generator.</li>
+<li>9 - Port scanner.</li>
 <li>cls - Clear screen.</li>
 
-<h2>Working on (1.2):</h2>
+<h2>Working on (1.3):</h2>
 <li><b>Debian and Debian-based</b> (Ubuntu, Zorin OS, Kali Linux, Linux Mint, etc.) ✅</li>
 <li><b>Fedora and Fedora-based</b> (openSUSE, CentOS, Oracle Linux, Red Hat, etc.) ❔</li>
 <li><b>Arch and Arch-based</b> (Manjaro, SteamOS, etc.)❔</li>
