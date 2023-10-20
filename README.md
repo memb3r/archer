@@ -12,7 +12,7 @@
 
 <h2>Preview:</h2>
 
-<img src="archerterminal.png">
+<img src="archerterm.png">
 
 <h2>Installation:</h2>
 
