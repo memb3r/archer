@@ -10,6 +10,10 @@
   <img src="https://img.shields.io/github/repo-size/memb3r/archer"> <img src="https://img.shields.io/github/last-commit/memb3r/archer">
 </p>
 
+<h2>Preview:</h2>
+
+<img src="archerterminal.png">
+
 <h2>Installation:</h2>
 
 <p>For Ubuntu, Debian (apt):</p>
@@ -66,10 +70,6 @@ $ cd archer
 $ python3 install.py
 $ python3 archer.py
 ```
-
-<h2>Preview:</h2>
-
-<img src="archerterminal.png">
 
 <h2>Usage:</h2>
 
