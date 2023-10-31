@@ -10,6 +10,10 @@
   <img src="https://img.shields.io/github/repo-size/memb3r/archer"> <img src="https://img.shields.io/github/last-commit/memb3r/archer">
 </p>
 
+<p align="center">
+  <a href="https://colab.research.google.com/drive/1xpib2dygsEYTFvf0ywkVRMBMZLRLmpGY?usp=sharing">Google Colab Demo</a>
+</p>
+
 <h2>Preview:</h2>
 
 <img src="archerterm.png">
